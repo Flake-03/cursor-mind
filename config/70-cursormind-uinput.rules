@@ -1,0 +1,2 @@
+# Add the desktop user to the private cursormind-input group.
+SUBSYSTEM=="misc", KERNEL=="uinput", GROUP:="cursormind-input", MODE:="0660", OPTIONS+="static_node=uinput"

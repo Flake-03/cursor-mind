@@ -1,0 +1,24 @@
+[build-system]
+requires = ["poetry-core>=2.0,<3.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "cursormind"
+version = "0.1.0"
+description = "Voice-directed web agents with Gemini Live and independent visible Chromium sessions"
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "browser-use==0.12.0",
+    "google-genai==1.60.0",
+    "sounddevice==0.5.3",
+    "pillow>=11",
+    "python-dotenv==1.2.1",
+]
+
+[project.scripts]
+cursormind = "cursormind.app:main"
+
+[tool.poetry]
+packages = [{ include = "cursormind", from = "src" }]
+
